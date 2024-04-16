@@ -4,7 +4,7 @@
 import { create } from "zustand";
 
 export const useUserStore = create(set => ({
-	userData: null,
+	userData: null, //we put it null because we don´t want to display the user data if we have don´t have any user data. whenever there is no data, we won´t display anything
 	loading: false,
 	error: null,
 
@@ -29,3 +29,5 @@ export const useUserStore = create(set => ({
 		}
 	}
 }))
+
+/* We do the fetching of the user, We changed the different initial states here. Once we have fetched the data successfully we change the user data to hold the information about one person. And if there's an error, we see the error. And and finally we set the loading to false. And then in the user component, we are using all of these.  */
